@@ -1,0 +1,18 @@
+import requests
+
+url = "https://vd6.l.qq.com/proxyhttp"
+heards = {
+    'Cookie': 'tvfe_boss_uuid=069452e8330c0162; pgv_pvid=5155231809; appuser=188ADD211F90EDE3; Lturn=856; LKBturn=415; LPVLturn=855; LPLFturn=66; pgv_info=ssid=s3957550201; lv_play_index=19; o_minduid=; vversion_name=8.2.95; video_omgid=f01eb657971b372c',
+    'Host': 'vd6.l.qq.com',
+    'Origin': 'https://v.qq.com',
+    'Referer': 'https://v.qq.com/',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+    'Date': 'Sun, 23 Oct 2022 13:40:00 GMT'
+}
+data = {"buid":"vinfoad","vinfoparam":"charge=0&otype=ojson&defnpayver=3&spau=1&spaudio=0&spwm=1&sphls=2&host=v.qq"
+                                      ".com&refer=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fm441e3rjq9kwpsc%2Fc00442r6ry6"
+                                      ".html&ehost=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fm441e3rjq9kwpsc%2Fc00442r6ry6"
+                                      ".html&sphttps=1&encryptVer=8.1&cKey"
+                                      "=674C2434AAFB37A9A1DC739DEDE72E1701ED6BA75EFC23C40B4A1EEF1E16B6FD9A09EB92D34BB6EEE19672DB44C6183BFED12A159C1D21D393364FDBDF94338F919BEE80561E02032C2BEAD9A4053F8035B783F7352FA4E0287ED620FC711FF068E736178B02F3DD8C875544A53743594E9A876897BA34B5B316EABAC62C547E0A5ED3CBDE6039F9B8CB92C990D9C8E18B0F5C46F4DA06036969A96A250E5025CB66CADC570F228117C8BDFEBE14AB51357721F278ECBC8ED624C4742CE75D74BEB1E2F8D36E9DAB221E1413CD6C88A3BBD5E060DC0F2395718073F234A248676D9B7337A240CE47E2246408911F9516C3D31997C138F66B053221E67D8EBA5E&clip=4&guid=f01eb657971b372c&flowid=1a0dabdf7acd4bc7ff149ac1c1950abb&platform=10201&sdtfrom=v1010&appVer=3.5.57&unid=&auth_from=&auth_ext=&vid=c00442r6ry6&defn=&fhdswitch=0&dtype=3&spsrt=2&tm=1666532399&lang_code=0&logintoken=&spvvpay=1&spadseg=3&spav1=15&spsfrhdr=0&spvideo=0&spm3u8tag=67&spmasterm3u8=3&drm=40","sspAdParam":"{\"ad_scene\":1,\"pre_ad_params\":{\"ad_scene\":1,\"user_type\":-1,\"video\":{\"base\":{\"vid\":\"c00442r6ry6\",\"cid\":\"m441e3rjq9kwpsc\"},\"is_live\":false,\"type_id\":3,\"referer\":\"https://v.qq.com/x/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86\",\"url\":\"https://v.qq.com/x/cover/m441e3rjq9kwpsc/c00442r6ry6.html\",\"flow_id\":\"1a0dabdf7acd4bc7ff149ac1c1950abb\",\"refresh_id\":\"6b21eb35617833501b7ad6258f4e04cf_1666531905\"},\"platform\":{\"guid\":\"f01eb657971b372c\",\"channel_id\":0,\"site\":\"web\",\"platform\":\"in\",\"from\":0,\"device\":\"pc\",\"play_platform\":10201,\"pv_tag\":\"www_baidu_com|channel\"},\"player\":{\"version\":\"1.7.4\",\"plugin\":\"1.13.10\",\"switch\":1,\"play_type\":\"0\",\"img_type\":\"webp\"},\"token\":{\"type\":0,\"vuid\":0,\"vuser_session\":\"\",\"app_id\":\"\",\"open_id\":\"\",\"access_token\":\"\"}}}","adparam":"pf=in&pf_ex=pc&pu=-1&pt=0&platform=10201&from=0&flowid=1a0dabdf7acd4bc7ff149ac1c1950abb&guid=f01eb657971b372c&coverid=m441e3rjq9kwpsc&vid=c00442r6ry6&chid=0&tpid=3&refer=https%3A%2F%2Fv.qq.com%2Fx%2Fsearch%2F%3Fq%3D%25E6%2596%2597%25E7%25BD%2597%25E5%25A4%25A7%25E9%2599%2586&url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fm441e3rjq9kwpsc%2Fc00442r6ry6.html&lt=&opid=&atkn=&appid=&uid=&tkn=&rfid=6b21eb35617833501b7ad6258f4e04cf_1666531905&v=1.7.4&vptag=www_baidu_com%7Cchannel&ad_type=LD%7CKB%7CPVL&live=0&appversion=3.1.9&ty=web&adaptor=1&dtype=1&resp_type=json&s_img=webp"}
+re = requests.post(url,headers=heards,data=data)
+print(re.text)
